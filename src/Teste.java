@@ -2,15 +2,16 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Teste {
-    public static int menorValorDeCompra(List<Integer> acoes) {
+
+    private static int menorValorDeCompra(List<Integer> acoes) {
         return acoes.stream().reduce(Integer::min).get();
     }
 
-    public static int melhorValorDeVenda(List<Integer> acoes) {
+    private static int melhorValorDeVenda(List<Integer> acoes) {
         return acoes.stream().reduce(Integer::max).get();
     }
 
-    public static void lucro(int melhorValorDeVenda, int menorValorDeCompra) {
+    private static void lucro(int melhorValorDeVenda, int menorValorDeCompra) {
         System.out.println(melhorValorDeVenda - menorValorDeCompra);
     }
 
